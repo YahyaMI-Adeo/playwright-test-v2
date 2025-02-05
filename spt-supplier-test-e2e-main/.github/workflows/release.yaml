@@ -1,0 +1,16 @@
+name: Release
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  release:
+    uses: adeo/dxp--reusable-github-actions-workflows/.github/workflows/semantic-release.yml@v1
+    with:
+      vault-namespace: 'adeo/spt'
+      vault-jwt-role-name: 'tf-github-spt-supplier-test-e2e'
+      vault-secrets: | # pragma: allowlist secret
+        secret/data/_services/github/starterhub-svc-github token | GITHUB_PERSONAL_TOKEN ;

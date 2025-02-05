@@ -1,0 +1,95 @@
+{
+  "INTERNAL": {
+    "INTERNAL_ACCESSES": {
+      "ROLE_FIELDS": ".mat-form-field-infix"
+    },
+    "SUPPLIER_ACCESSES": {
+      "ROLE_FIELDS": ".mat-form-field-infix",
+      "TABS": {
+        "FINANCE_TAB": "#mat-tab-label-0-0",
+        "COMMERCIAL_TAB": "#mat-tab-label-0-1",
+        "SERVICES_TAB": "#mat-tab-label-0-2"
+      }
+    },
+    "DIRECTORY": {
+      "SEARCH_FIRST_ROW": "//*[@id='supplier_list_table']/tbody/tr[1]",
+      "SEARCH_FIRST_ROW_SELECTOR": "//*[@id='supplier_list_table']/tbody/tr[1]",
+      "ENTITIES": {
+        "SWITCH_RIGHT_TOGGLE": "//*[@id='mat-slide-toggle-1']/label/div",
+        "CHANGE_RIGHT_FOUJUR_BUTTON": "body > div.sitebox-div-container > div.sitebox-div-home-container > app-root > spl-page-template > mat-drawer-container > mat-drawer-content > app-directory > app-entities > app-entities-details > button",
+        "CHANGE_RIGHT_FOUCOM_BUTTON": "//*[@id='mat-tab-content-0-0']/div/div[1]/button"
+      },
+      "CONTACTS": {
+        "CREATE_CONTACT_BUTTONS": "#new_contact_button",
+        "CREATE_ADMIN_CONTACT_MODAL": {
+          "SAVE_BUTTON": "//*[@id='mat-dialog-0']/app-modal-create-admin/div[3]/button[2]",
+          "CIVILITY_INPUT": "#civility_input",
+          "LASTNAME_INPUT": "#lastname_input",
+          "FIRSTNAME_INPUT": "#firstname_input",
+          "MIDDLE_NAME_INPUT": "#middlename_input",
+          "JOB_INPUT": "#job_input",
+          "EMAIL_INPUT": "#email_input",
+          "CONFIRM_EMAIL_INPUT": "#confirmEmail_input",
+          "PHONE_INPUT": "#phone_input",
+          "CELLPHONE_INPUT": "#cellphone_input",
+          "LANGUAGE_INPUT": "#language_input"
+        }
+      }
+    }
+  },
+  "EXTERNAL": {
+    "ACCOUNT": {
+      "USER_ID": "#user-id",
+      "EMAIL_CONTAINER": "#email-container",
+      "JOB_CONTAINER": "#job-container",
+      "LANGUAGE_DETAILS": "#language-details",
+      "EDIT_INFO_BUTTON": "#edit-info-button"
+    },
+    "MY_TEAM": {
+      "TABS": {
+        "CONTACT_TAB": "#mat-tab-label-0-0",
+        "FUNCTION_TAB": "#mat-tab-label-0-1",
+        "ACCESS_TAB": "#mat-tab-label-0-2"
+      },
+      "FIRST_CONTACT_ROW": {
+        "IDENTITY": "//*[@id='contact_list_table']/tbody/tr[1]/td[1]/span/span",
+        "MANAGE_FUNCTION_BUTTON": "//*[@id='contact_list_table']/tbody/tr[1]/td[5]",
+        "MANAGE_ACCESS_BUTTON": "//*[@id='contact_list_table']/tbody/tr[1]/td[6]",
+        "EDIT_CONTACT_BUTTON": "//*[@id='contact_list_table']/tbody/tr[1]/td[4]/a"
+      },
+      "EDIT_CONTACT_DIALOG": {
+        "VALIDATE_BUTTON": "//*[@id='mat-dialog-0']/app-modal-contact-infos/mat-dialog-actions/button[2]"
+      },
+      "MANAGE_FUNCTION": {
+        "OPTIONAL_ROW": "//*[@id='text-tabs-1']",
+        "MANDATORY_ROW": "//*[@id='text-tabs-0']",
+        "VALIDATE_BUTTON": "#validate-button",
+        "CANCEL_BUTTON": "#cancel-button",
+        "UNDEFINED_TITLE": "#undefined_title",
+        "SELECT_ALL_CHECKBOX": "//*[@id='select-all-checkbox']"
+      },
+      "ACCESS": {
+        "WARNING_NOTIFICATION": "#warning-notification"
+      },
+      "NEW_CONTACT": {
+        "CIVILITY_INPUT": "#civility_input",
+        "LASTNAME_INPUT": "#lastname_input",
+        "FIRSTNAME_INPUT": "#firstname_input",
+        "MIDDLE_NAME_INPUT": "#middlename_input",
+        "JOB_INPUT": "#job_input",
+        "EMAIL_INPUT": "#email_input",
+        "CONFIRM_EMAIL_INPUT": "#confirmEmail_input",
+        "LANGUAGE_INPUT": "#language_input",
+        "BUTTON": "//*[@id='new_contact_button']",
+        "PHONE_INPUT": "#phone_input",
+        "CELLPHONE_INPUT": "#cellphone_input",
+        "FAX_INPUT": "#fax_input",
+        "SAVE_BUTTON": "//*[@id='save_button']"
+      },
+      "SLIDER": {
+        "FUNCTION_MANAGEMENT": "#mat-slide-toggle-1",
+        "ACCESS_MANAGEMENT": "#mat-slide-toggle-2-input"
+      }
+    }
+  }
+}

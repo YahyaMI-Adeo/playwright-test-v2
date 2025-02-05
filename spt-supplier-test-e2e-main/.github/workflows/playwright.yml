@@ -1,0 +1,50 @@
+name: Playwright Tests
+
+permissions: write-all
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: [self-hosted, Linux, xl]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+      - name: '🔐 Import secrets from Vault'
+        uses: adeo/vault-action@v1.4.0
+        with:
+          vault-namespace: 'adeo/spt'
+          vault-jwt-role-name: 'tf-github-spt-supplier-test-e2e'
+          vault-secrets: |
+            secret/data/spt-supplier-test-e2e/ci * | E2E_;
+      - name: Create .env file with E2E environment variables (without prefix)
+        run: |
+          printenv | grep '^E2E_' | while IFS='=' read -r key value; do
+            # Remove the E2E_ prefix from the key
+            clean_key="${key#E2E_}"
+            echo "$clean_key=$value" >> .env
+          done
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: npx playwright test
+      - name: Upload Playwright screenshots
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-screenshots
+          path: playwright-report/

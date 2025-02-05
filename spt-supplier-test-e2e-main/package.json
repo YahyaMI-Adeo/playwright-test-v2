@@ -1,0 +1,21 @@
+{
+  "name": "spt-supplier-test-e2e",
+  "version": "1.0.0",
+  "description": "Repository generated from [Code Starter \"github-repository\" by Delivery Experience](https://starterhub.priv.mutu.adeo.cloud/app/starters/code-v1/github-repository)",
+  "main": "index.js",
+  "scripts": {
+    "test:internal": "npx playwright test --project=internal-setup --project=google-chrome-internal",
+    "test:external": "npx playwright test --project=external-setup --project=google-chrome-external --project=google-chrome-external-destructive"
+  },
+  "keywords": [],
+  "author": "YahyaMI-Adeo",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.7.6",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "unique-names-generator": "^4.7.1"
+  }
+}
