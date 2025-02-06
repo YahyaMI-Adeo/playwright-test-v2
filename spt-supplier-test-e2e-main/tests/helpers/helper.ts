@@ -29,7 +29,7 @@ export async function accessBaseUrl(page: Page, env: Environment, url?: string) 
                 break;
         }
     }
-    await page.goto(localUrl);
+    await page.goto(<string>localUrl);
 }
 
 export async function accessAppFromSideBar(page: Page, menuId: string, appId: string) {
