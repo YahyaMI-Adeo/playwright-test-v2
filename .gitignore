@@ -20,6 +20,7 @@ wip
 .idea/
 deps.sh
 .env
+dist
 
 # semantic release content manage by workflow deploy
 .releaserc.json
